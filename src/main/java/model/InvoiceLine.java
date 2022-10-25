@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author world
+ * @author Hatem
  */
 public class InvoiceLine {
     private String name;

@@ -57,7 +57,7 @@ public class SIGFrame extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "No.", "Date.", "Customer", "Total."
             }
         ));
         jScrollPane1.setViewportView(HeaderTable);
@@ -80,18 +80,23 @@ public class SIGFrame extends javax.swing.JFrame {
 
         lineTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "No.", "Item Name.", "Item Price", "Count", "Item Total"
             }
         ));
         jScrollPane2.setViewportView(lineTable);
 
         CreateInvBtn.setText("Create Invoice");
+        CreateInvBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateInvBtnActionPerformed(evt);
+            }
+        });
 
         DeleteInvBtn.setText("Delete Invoice");
         DeleteInvBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +120,11 @@ public class SIGFrame extends javax.swing.JFrame {
         });
 
         jMenu1.setText("File");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         LoadMenuItem.setText("Load");
         LoadMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +150,16 @@ public class SIGFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(CreateInvBtn)
+                .addGap(82, 82, 82)
+                .addComponent(DeleteInvBtn)
+                .addGap(162, 162, 162)
+                .addComponent(createitemBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(deleteitemBtn)
+                .addGap(97, 97, 97))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,21 +175,12 @@ public class SIGFrame extends javax.swing.JFrame {
                             .addComponent(InvTotalLbl)
                             .addComponent(InvDateLbl)
                             .addComponent(InvNumLbl)
-                            .addComponent(InvCustLbl)))
+                            .addComponent(InvCustLbl))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(CreateInvBtn)
-                .addGap(82, 82, 82)
-                .addComponent(DeleteInvBtn)
-                .addGap(162, 162, 162)
-                .addComponent(createitemBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(deleteitemBtn)
-                .addGap(97, 97, 97))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +205,7 @@ public class SIGFrame extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(InvTotalLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CreateInvBtn)
@@ -226,6 +237,15 @@ public class SIGFrame extends javax.swing.JFrame {
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_saveMenuItemActionPerformed
+
+    private void CreateInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateInvBtnActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_CreateInvBtnActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments

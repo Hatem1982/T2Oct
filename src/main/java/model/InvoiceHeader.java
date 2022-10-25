@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author world
+ * @author Hatem
  */
 public class InvoiceHeader {
     private int num;
